@@ -33,3 +33,21 @@ Python 3.8 이상 환경을 권장합니다. 아래 명령어를 통해 필수 �
 
 ```bash
 pip install numpy scipy osqp mujoco mujoco-viewer imageio
+
+## 🚀 Usage
+기본적인 실행 파일은 run_go2_convex_mpc.py입니다. 다양한 Command Line 인자를 지원하여 시뮬레이션 환경을 쉽게 제어할 수 있습니다.
+
+1. 기본 제자리걸음 (Trot in place)
+
+```Bash
+python run_go2_convex_mpc.py --mode trot
+2. 전진 보행 (Forward Trotting)
+목표 속도(vx)를 0.4 m/s로 설정하여 전진합니다.
+
+```Bash
+python run_go2_convex_mpc.py --mode trot --vx 0.4
+3. 외란 회복 테스트 (Random Push Test)
+3초 간격으로 무작위 방향에서 50N의 힘을 가하여 로봇의 밸런싱 능력을 테스트합니다.
+
+```Bash
+python run_go2_convex_mpc.py --mode trot --vx 0.4 --push-force 50 --push-interval 3.0 --push-duration 0.15
