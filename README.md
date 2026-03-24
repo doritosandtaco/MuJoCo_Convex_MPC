@@ -20,7 +20,7 @@ A robust, real-time Convex Model Predictive Control (MPC) implementation for the
 
 ## ✨ Key Features
 
-* **Real-time Optimization (OSQP)**: 기존 범용 비선형 솔버 대신 고속 2차 계획법(QP) 솔버인 OSQP와 Euler 이산화 기법을 적용하여 500Hz 제어 루프 내에서 지연 없는 실시간 MPC 연산을 수행합니다.
+* **Real-time Optimization (OSQP)**: 기존 범용 비선형 솔버 대신 고속 2차 계획법(QP) 솔버인 OSQP와 Euler 이산화 기법을 적용하여 MPC 연산을 수행합니다.
 * **Robust Push Recovery**: 외란 발생 시 몸체의 실제 속도 오차를 반영하는 Raibert Heuristic 알고리즘을 통해 넘어지는 방향으로 스윙 발을 뻗어 밸런스를 스스로 회복합니다.
 * **Hardware-Accurate Dynamics**: 로봇의 기하학적 중심이 아닌 실제 관성 중심(Center of Mass, `xipos`)을 기준으로 제어하여, 머리와 배터리로 인해 앞이 무거운 실제 Go2 하드웨어의 무게 배분을 완벽히 보상합니다.
 * **Roll Divergence Prevention**: 강한 측면 충격 시 로봇의 다리가 찢어지며 제어력을 상실하는 현상(Kinematic Singularity)을 방지하기 위해 보폭 제한(Clipping) 및 스탠스 너비 강제 확장 로직이 적용되었습니다.
