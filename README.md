@@ -14,7 +14,7 @@ A robust, real-time Convex Model Predictive Control (MPC) implementation for the
 ### 2. Push Recovery (Disturbance Rejection)
 보행 중 측면 및 전후방에서 강력한 무작위 외란(Push)이 발생했을 때, Raibert Heuristic과 MPC가 협력하여 발을 뻗어 중심을 되찾는 샌드백 테스트입니다.
 
-![Push Recovery](trot_forward_push.gif)
+![Push Recovery](trot_forward_with_push.gif)
 
 <br>
 
